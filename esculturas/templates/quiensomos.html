@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/misestilos.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <title>GrupoCero</title>
+    <script src="{% static 'js/valida.js' %}"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.jpg' %}">
+</head>
+<body>
+    <br>
+    <br>
+    <div class="container">
+        <h1 id="#cajaQuien">¿Quienes somos?</h1>
+
+        <p class="paragraph">Creemos que el arte entendido en un contexto de sostenibilidad, puede contribuir a lograr
+            una mejor comunicación entre la gente
+            y tiene el potencial de transformar la vida cotidiana.
+            El arte y la sostenibiliad están hoy ligados. Muchos artistas se muestran comprometidos con una nueva
+            sensibilidad estética,ofreciendo múltiples propuestas artísticas en las que se intenta provocar una
+            reflexión cultural
+            sobre el significado de la naturaleza y su relación con el ser humano.
+            Para conseguir nuestros fines, desarrollamos nuestra actividad a través de proyectos artísticos y
+            socioeducativos que promuevan la sostenibilidad en un contexto de preocupaciones sociales y ecológicas.
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="video-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SfcWkVob-Jw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <br>
+        <br>
+        <div class="social-icons-container">
+            <img src="{% static 'img/facebook.png' %}" class="social-icon" href="">
+            <img src="{% static 'img/instagram.png' %}" class="social-icon" href="">
+            <img src="{% static 'img/twitter.png' %}" class="social-icon" href="">
+        </div>
+        <ul>
+            <li class="footer-menu-item">Legal</li>
+            <li class="footer-menu-item">Cookies</li>
+            <li class="footer-menu-item">Privacy</li>
+        </ul>
+        <br>
+        <br>
+        <div>
+            <h4 class="h4" onmouseover="style.color = 'grey' " onmouseout="style.color= 'white'">Contactanos</h4>
+            <form  method="post" id="contactanos">
+                <div class="form-group">
+                    <label for="nom">Nombre de usuario</label>
+                    <input type="text" id="nom" name="nom" required 
+                    minlength="3" placeholder="Nombre..." class="form-control"  onfocus="CambiaColor(this)" onchange="CambiarMayusculas()">
+                </div>
+
+                <div class="form-group">
+                    <label for="ape">Apellido</label>
+                    <input type="text" id="ape" name="ape" required 
+                    minlength="3" placeholder="Apellido..." class="form-control"  onfocus="CambiaColor(this)">
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="text" id="correo" name="correo" required
+                    placeholder="user@gmail.com" class="form-control"  onfocus="CambiaColor(this)">
+                </div>
+
+                <div class="form-group">
+                    <label for="fono">Teléfono</label>
+                    <input type="number" id="fono" name="fono" required
+                    placeholder="Telefono..." minlength="9" class="form-control"  onfocus="CambiaColor(this)">
+                </div>
+
+                <div>
+                    <textarea cols="20" rows="10" placeholder="Descripcion..." id="carta"  class="form-control" minlength="10" onfocus="CambiaColor(this)"  ></textarea>
+                    <br>
+                    <br>
+                    <input type="submit" value="Enviar" id="enviar" class="btn btn-success">
+                    <input type="reset" value="Limpiar" id="limpiar" class="btn btn-warning">
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+        <span class="copyright">&copy;2023, GrupoCero, Todos los derechos reservados Gustavo Hermosilla</span>
+    </footer>
+
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+{% endblock %}

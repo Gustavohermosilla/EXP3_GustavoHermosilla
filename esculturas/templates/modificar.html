@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/misestilos.css' %} ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <title>GrupoCero</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.jpg' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Modificar Producto</h2>
+        <form method="POST" id="formulario">
+            
+            {% csrf_token %}
+            <div class="row">
+                <label for="{{ form.field.name }}">
+                    {{form.idproducto.label}}
+                </label>
+                {{ form.idproducto }}
+            </div>
+
+            <div class="row">
+                <label for="{{ form.field.name }}">
+                    {{form.nombre.label}}
+                </label>
+                {{ form.nombre }}
+            </div>
+
+            <div class="row">
+                <label for="{{ esculturaform.field.name }}">
+                    {{form.modelo.label}}
+                </label>
+                {{ form.modelo }}
+            </div>
+
+            <div class="row">
+                <label for="{{ esculturaForm.field.name }}">
+                    {{form.categoria.label}}
+                </label>
+                {{ form.categoria }}
+            </div>
+
+            <br><br>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Modificar">
+                <a href="{% url 'principal' %}" class="btn btn-success">Inicio</a>
+            </div>
+
+
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="social-icons-container">
+            <img src="{% static 'img/facebook.png' %}" class="social-icon" href="">
+            <img src="{% static 'img/instagram.png' %}" class="social-icon" href="">
+            <img src="{% static 'img/twitter.png' %}" class="social-icon" href="">
+        </div>
+        <ul>
+            <li class="footer-menu-item">Legal</li>
+            <li class="footer-menu-item">Cookies</li>
+            <li class="footer-menu-item">Privacy</li>
+        </ul>
+        <span class="copyright">&copy;2023,GrupoCero, Todos los derechos reservados Gustavo Hermosilla </span>
+    </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+ </body>
+</html>
+{% endblock %}

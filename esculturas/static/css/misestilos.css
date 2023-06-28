@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;  /*Relleno de los elementos al inicio de la pagina */
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+footer{
+    width: 100%;
+    position:static;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color:rgb(32, 32, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.social-icons-container, .footer-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-icon{
+    height: 50px;
+    width: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    margin: 1rem;
+}
+
+
+.footer-menu-container{
+    list-style-type: none;
+    color: rgb(0, 255, 221);
+    font-size: 18px;
+
+}
+
+.menu-item{
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover{
+    opacity: 1;
+}
+
+.copyright{
+    color: white;
+    opacity: 4;
+    text-align: center;
+}
+
+.footer-menu-item{
+    color: white;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: rgb(215, 219, 219);
+}
+
+#cajaQuien{
+    text-align: center;
+}
+
+.video-responsive {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+	}
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	}
+input{
+        float:left;
+        margin-bottom: 10px;
+    }
+    
+label{
+        color: white;
+        clear: both;
+        float:left;
+        width: 150px;
+    }
+    
+#enviar{
+        clear: both;
+        float:left;
+        width: 150px;
+    }
+    
+#limpiar{
+        float:left;
+        width: 150px;
+        margin-left: 30px;
+    
+    }
+.error-control{
+        border: 1px solid red;
+    }
+label.error{
+        color:red;
+        width: 250px;
+        font-size: 0.8em;
+        margin-top:-5px;
+        margin-bottom: 10px;
+    }
+
+.h4{
+    
+    color: white;
+}
+
+
+
+
