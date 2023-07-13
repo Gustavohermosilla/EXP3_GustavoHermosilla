@@ -30,16 +30,23 @@
 
             <div class="row">
                 <label for="{{ form.field.name }}">
-                    {{form.nombre.label}}
+                    {{form.producto.label}}
                 </label>
-                {{ form.nombre }}
+                {{ form.producto }}
             </div>
 
             <div class="row">
                 <label for="{{ esculturaform.field.name }}">
-                    {{form.modelo.label}}
+                    {{form.precio.label}}
                 </label>
-                {{ form.modelo }}
+                {{ form.precio }}
+            </div>
+
+            <div class="row">
+                <label for="{{ esculturaform.field.name }}">
+                    {{form.stock.label}}
+                </label>
+                {{ form.stock }}
             </div>
 
             <div class="row">
@@ -47,6 +54,13 @@
                     {{form.categoria.label}}
                 </label>
                 {{ form.categoria }}
+            </div>
+
+            <div class="row">
+                <label for="{{ vehiculoform.field.name }}">
+                    {{form.imagen.label}}
+                </label>
+                {{ form.imagen }}
             </div>
 
             <br><br>

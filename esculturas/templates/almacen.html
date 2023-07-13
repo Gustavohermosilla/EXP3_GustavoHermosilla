@@ -20,26 +20,28 @@
     <br>
     <div class="container">
         <div class="table-responsive-md">
-        <h2>Productos</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Id Producto</th>
-                    <th>Nombre</th>
-                    <th>Modelo</th>
-                    <th>Categoria</th>
-                    <th>Imagen</th>
-                    <th>Eliminar</th>
-                    <th>Modificar</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for producto in esculturas %} 
-                <tr>
-                    <td> {{ producto.idproducto }}</td>
-                    <td> {{ producto.nombre }} </td>
-                    <td> {{ producto.modelo }} </td>
-                    <td> {{ producto.categoria }}</td>
+            <h2>Productos</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id Producto</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Categoria</th>
+                        <th>Imagen</th>
+                        <th>Eliminar</th>
+                        <th>Modificar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for producto in esculturas %} 
+                    <tr>
+                        <td> {{ producto.idproducto }}</td>
+                        <td> {{ producto.producto }} </td>
+                        <td> {{ producto.precio }} </td>
+                        <td> {{ producto.stock }} </td>
+                        <td> {{ producto.categoria }}</td>
                     {% if producto.imagen  %}
                         <td scope="row">
                             <img src="{{ producto.imagen.url }}" style="height: 50px; width: 50px;">

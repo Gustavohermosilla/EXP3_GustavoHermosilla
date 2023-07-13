@@ -15,11 +15,12 @@ class RegistroUserForm(UserCreationForm):
 class EsculturasForm(forms.ModelForm):
     class Meta:
         model = Producto
-        fields = ['idproducto', 'nombre', 'modelo', 'imagen', 'categoria']
+        fields = ['idproducto', 'producto', 'precio','stock', 'imagen', 'categoria']
         labels = {
             'idproducto': 'Idproducto',
-            'nombre': 'Nombre',
-            'modelo': 'Modelo',
+            'producto': 'Producto',
+            'precio': 'Precio',
+            'stock' : 'Stock',
             'imagen': 'Imagen',
             'categoria': 'Categoria'
         }
@@ -31,18 +32,25 @@ class EsculturasForm(forms.ModelForm):
                     'id': 'codigo',
                 }
             ),
-            'nombre':forms.TextInput(
+            'producto':forms.TextInput(
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Ingrese nombre..',
                     'id': 'marca',
                 }
             ),
-            'modelo': forms.TextInput(
+            'precio': forms.NumberInput(
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Ingrese modelo..',
-                    'id': 'modelo',
+                    'placeholder': 'Ingrese precio..',
+                    'id': 'precio',
+                }
+            ),
+            'stock': forms.NumberInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Ingrese stock..',
+                    'id': 'stock',
                 }
             ),
             'imagen':forms.FileInput(

@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/misestilos.css' %} ">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <title>Grupo Cero</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.jpg' %}">
+</head>
+<body>
+    <!--Creamos las Tarjetas de Articulos-->
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 well">
+                <div class="card">
+                    <img src="{% static 'img/Articulo1.jpg' %}" alt="Cinque Terre" >
+                    <div class="card-body">
+                        <h3 class="card-title">Perro Negro</h3>
+                        <p class="card-text">
+                           
+                        </p>
+                        <a href="#" class="btn btn-info">Añadir</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 well">
+                <div class="card">
+                    <img src="{% static 'img/Articulo2.jpg' %}" alt="Cinque Terre" width="558" height="446">
+                    <div class="card-body">
+                        <h3 class="card-title">Circulos</h3>
+                        <p class="card-text">
+                           
+                        </p>
+                        <a href="#" class="btn btn-info">Añadir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 well">
+                <div class="card">
+                        <img src="{% static 'img/Articulo3.jpg' %}" alt="Cinque Terre" width="558" height="446">
+                    <div class="card-body">
+                            <h3 class="card-title">Cuerpo</h3>
+                            <p class="card-text">
+                            
+                            </p>
+                            <a href="#" class="btn btn-info">Añadir</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 well">
+                <div class="card">
+                    <img src="{% static 'img/Articulo4.jpg' %}" alt="Cinque Terre" width="558" height="446">
+                    <div class="card-body">
+                        <h3 class="card-title">Toro Negro</h3>
+                        <p class="card-text">
+                            
+                        </p>
+                        <a href="#" class="btn btn-info">Añadir</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 well">
+                <div class="card">
+                    <img src="{% static 'img/Articulo5.jpg' %}" alt="Cinque Terre" width="558" height="446">
+                    <div class="card-body">
+                        <h3 class="card-title">Sociedad</h3>
+                        <p class="card-text">
+                           
+                        </p>
+                        <a href="#" class="btn btn-info">Añadir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 well">
+                <div class="card">
+                    <img src="{% static 'img/Articulo6.jpg' %}" alt="Cinque Terre" width="558" height="446">
+                    <div class="card-body">
+                        <h3 class="card-title">Escultura Negra</h3>
+                        <p class="card-text">
+                        
+                        </p>
+                        <a href="#" class="btn btn-info">Añadir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 well">
+                <div class="card">
+                    <img src="{% static 'img/Articulo7.jpg' %}" alt="Cinque Terre" width="558" height="446">
+                    <div class="card-body">
+                        <h3 class="card-title">Hoja</h3>
+                        <p class="card-text">
+                        
+                        </p> 
+                        <a href="#" class="btn btn-info">Añadir</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 well">
+                <div class="card">
+                    <img src="{% static 'img/Articulo8.png' %}" alt="Cinque Terre" width="558" height="446">
+                    <div class="card-body">
+                        <h3 class="card-title">Mano 2</h3>
+                        <p class="card-text">
+                        
+                        </p>
+                        <a href="#" class="btn btn-info">Añadir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 well">
+                <div class="card">
+                    <img src="{% static 'img/Articulo9.png' %}" alt="Cinque Terre" width="558" height="446">
+                    <div class="card-body">
+                        <h3 class="card-title">Mano 1</h3>
+                        <p class="card-text">
+                        
+                        </p>
+                        <a href="#" class="btn btn-info">Añadir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+      <footer>
+        <div class="social-icons-container">
+            <img src="{% static 'img/facebook.png' %}" class="social-icon" href="">
+            <img src="{% static 'img/instagram.png' %}" class="social-icon" href="">
+            <img src="{% static 'img/twitter.png' %}" class="social-icon" href="">
+        </div>
+        <ul>
+            <li class="footer-menu-item">Legal</li>
+            <li class="footer-menu-item">Cookies</li>
+            <li class="footer-menu-item">Privacy</li>
+        </ul>
+        <span class="copyright">&copy;2023, GrupoCero, Todos los derechos reservados Gustavo Hermosilla </span>
+    </footer>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>
+{% endblock %}

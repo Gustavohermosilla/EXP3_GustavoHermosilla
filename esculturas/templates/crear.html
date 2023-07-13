@@ -22,33 +22,37 @@
             
         }
     </style>
-    <script>
-        $(function(){
-            $("#formulario").validate({
-                rules:{
-                    idproducto: "required",
-                    nombre: "required",
-                    modelo:"required",
-                    categoria:"required"
+   <script>
+    $(function(){
+        $("#formulario").validate({
+            rules:{
+                idproducto: "required",
+                producto: "required",
+                precio:"required",
+                stock :"required",
+                categoria:"required"
+            },
+            messages:{
+                idproducto:{
+                    required: 'Ingrese una id',
                 },
-                messages:{
-                    idproducto:{
-                        required: 'Ingrese una id',
-                    },
-                    nombre:{
-                        required: 'Ingrese un Nombre',
-                    },
-                    modelo: {
-                        required: 'Ingrese un Modelo',
-                    },
-                    categoria:{
-                        required: 'Seleccione una Categoria',
-                    }
+                producto:{
+                    required: 'Ingrese un producto',
+                },
+                precio: {
+                    required: 'Ingrese un precio',
+                },
+                stock: {
+                    required: 'Ingrese un stock',
+                },
+                categoria:{
+                    required: 'Seleccione una Categoria',
                 }
+            }
 
-            });
         });
-    </script>
+    });
+</script>
 </head>
 <body>
     <br>
@@ -67,14 +71,14 @@
                 <label for="{{ esculturaform.field.name }}">
                     {{esculturaform.nombre.label}}
                 </label>
-                {{ esculturaform.nombre }}
+                {{ esculturaform.producto }}
             </div>
 
             <div class="row">
                 <label for="{{ esculturaform.field.name }}">
-                    {{esculturaform.modelo.label}}
+                    {{esculturaform.precio.label}}
                 </label>
-                {{ esculturaform.modelo }}
+                {{ esculturaform.precio }}
             </div>
 
             <div class="row">
@@ -82,6 +86,13 @@
                     {{esculturaform.categoria.label}}
                 </label>
                 {{esculturaform.categoria }}
+            </div>
+
+            <div class="row">
+                <label for="{{ mascotaform.field.name }}">
+                    {{esculturaform.stock.label}}
+                </label>
+                {{ esculturaform.stock }}
             </div>
 
             <div class="row">

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/misestilos.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <title>Grupo Cero</title>
+</head>
+<body>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            {% for prod in producto %}
+            <br>
+            <br>
+            <div class="col-12 col-md-4">
+                <br>
+                <div class="card text-center">
+                    {% if prod.imagen %}
+                        <img src="{{ prod.imagen.url }}" class="card-img-top mx-auto">
+                    {% else %} 
+                        <img src="{% static 'img/rayo.jpg' %}" class="card-img-top mx-auto">
+                    {% endif %}
+                    <div class="card-body">
+                        <h4 class="card-title letra">Productos:</h4>
+                        <p class="card-text letra">
+                             {{ prod.producto }}
+                        </p>
+                        <p class="card-text letra">
+                            Stock: {{ prod.stock }}
+                        </p>
+                        <p class="card-text letra">
+                            Precio: {{ prod.precio }}
+                       </p>
+                       <a href="{% url 'agregar' prod.idproducto %}" class="btn btn-outline-success">Agregar al carro</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
